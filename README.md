@@ -119,7 +119,8 @@ Relevancia en el mundo real:
 "Aunque se trata de un trabajo practico, los conceptos empleados tienen aplicaciones prácticas en áreas como la planificación de rutas, la gestión de emergencias y la asignación de recursos en sistemas complejos."
 
 Cierre:
-"Finalmente, este trabajo no solo consolidó conocimientos técnicos, sino que también planteó nuevos desafíos que podrían explorarse en futuros proyectos, como la integración de inteligencia artificial para mejorar la toma de decisiones. Muchas gracias por su atención.
+"Finalmente, este trabajo no solo consolidó conocimientos técnicos, sino que también planteó nuevos desafíos que podrían explorarse en futuros proyectos,
+Muchas gracias por su atención.
 
 
 
