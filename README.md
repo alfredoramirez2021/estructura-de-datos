@@ -120,7 +120,38 @@ Relevancia en el mundo real:
 
 Cierre:
 "Finalmente, este trabajo no solo consolidó conocimientos técnicos, sino que también planteó nuevos desafíos que podrían explorarse en futuros proyectos,
+tales como  uso de programación orientada a objetos (POO) no solo es un paradigma de programación que organiza el software como un conjunto de objetos. Cada objeto es una instancia de una clase, y las clases son plantillas o moldes que definen las propiedades (atributos) y comportamientos (métodos) de esos objetosson para que se entienda mejor lo detallo punto por punto.
+
+Clase: Define el modelo de un objeto.
+
+Objeto: Es una instancia de una clase.
+
+Atributos: Son las características de un objeto.
+
+Métodos: Son las acciones que puede realizar un objeto.
+
+Encapsulamiento: Oculta la complejidad y muestra solo lo necesario.
+
+Herencia: Permite crear nuevas clases basadas en otras existentes.
+
+Polimorfismo: Permite que métodos en diferentes clases tengan el mismo nombre pero comportamientos distintos.
+
+Abstracción: Oculta los detalles complejos y solo presenta lo esencial.
+Este conocimiento tecnico es muy inportante debido al uso que se da en la actualidad junto con el conocimiento de ESTRUCTURAS RECURSIVAS son aquellas en las que la solución o la definición de un problema o estructura se refiere a sí misma. Estas estructuras se utilizan comúnmente en algoritmos y estructuras de datos como árboles y listas, y suelen aprovechar la recursión para dividir problemas en subproblemas más simples. La recursión es un enfoque poderoso, pero es importante tener en cuenta sus posibles limitaciones en términos de rendimiento y consumo de memoria.
+
+otro de los conocimientos tecticos es el uso de Un ARBOL BINARIO que es una estructura jerárquica en la que cada nodo tiene como máximo dos hijos.
+Los recorridos más comunes son en preorden, inorden, postorden y por niveles.
+Las operaciones típicas en un árbol binario incluyen la inserción, la búsqueda y la eliminación de nodos.
+En un árbol binario de búsqueda (BST), los nodos se organizan de manera que permite una búsqueda eficiente.
+Los árboles binarios son fundamentales en áreas como la búsqueda eficiente, la expresión algebraica, y la compresión de datos, entre otros.
+
+pero el uso de Un ARBOL GENERAL que es una estructura jerárquica donde cada nodo puede tener un número arbitrario de hijos. Es más flexible que los árboles binarios y puede ser utilizado en una variedad de aplicaciones, como sistemas de archivos y modelos jerárquicos. Los recorridos comunes en los árboles generales incluyen preorden, postorden y por niveles, y las operaciones más comunes son insertar, buscar y eliminar nodos.
+
+todo esto se organiza con una cola de prioridad es una estructura de datos que permite almacenar elementos junto con una prioridad, asegurando que los elementos con mayor prioridad se extraigan antes que los de menor prioridad. Las implementaciones más comunes utilizan montículos para gestionar la prioridad de manera eficiente, y las operaciones básicas son insertar un elemento con su prioridad y extraer el elemento con la mayor prioridad. Las colas de prioridad tienen muchas aplicaciones, como la gestión de tareas y la búsqueda de caminos más cortos en grafos.
+Para finalizae voy a dar un resumen de grafos que en si  es una estructura de datos que modela relaciones entre elementos mediante nodos y aristas. Existen diferentes tipos de grafos (dirigidos, no dirigidos, ponderados, etc.), y se pueden representar mediante listas de adyacencia, matrices de adyacencia o listas de aristas. Los grafos se utilizan en una variedad de aplicaciones como redes sociales, mapas de carreteras y algoritmos de rutas más cortas. Los algoritmos de búsqueda en grafos incluyen DFS (búsqueda en profundidad) y BFS (búsqueda en anchura).
+todos esto para realizar el TP que se entrega.
 Muchas gracias por su atención.
+
 
 
 
