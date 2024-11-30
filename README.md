@@ -137,7 +137,7 @@ Herencia: Permite crear nuevas clases basadas en otras existentes.
 Polimorfismo: Permite que métodos en diferentes clases tengan el mismo nombre pero comportamientos distintos.
 
 Abstracción: Oculta los detalles complejos y solo presenta lo esencial.
-Este conocimiento tecnico es muy inportante debido al uso que se da en la actualidad junto con el conocimiento de ESTRUCTURAS RECURSIVAS son aquellas en las que la solución o la definición de un problema o estructura se refiere a sí misma. Estas estructuras se utilizan comúnmente en algoritmos y estructuras de datos como árboles y listas, y suelen aprovechar la recursión para dividir problemas en subproblemas más simples. La recursión es un enfoque poderoso, pero es importante tener en cuenta sus posibles limitaciones en términos de rendimiento y consumo de memoria.
+Este conocimiento tecnico es muy inportante debido al uso que se da en la actualidad junto, con el conocimiento de ESTRUCTURAS RECURSIVAS que son aquellas en las que la solución o la definición de un problema o estructura se refiere a sí misma. Estas estructuras se utilizan comúnmente en algoritmos y estructuras de datos como árboles y listas, y suelen aprovechar la recursión para dividir problemas en subproblemas más simples. La recursión es un enfoque poderoso, pero es importante tener en cuenta sus posibles limitaciones en términos de rendimiento y consumo de memoria.
 
 otro de los conocimientos tecticos es el uso de Un ARBOL BINARIO que es una estructura jerárquica en la que cada nodo tiene como máximo dos hijos.
 Los recorridos más comunes son en preorden, inorden, postorden y por niveles.
