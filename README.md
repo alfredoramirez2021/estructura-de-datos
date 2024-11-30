@@ -29,116 +29,68 @@ Ejecuta el programa para interactuar con las estructuras y simular escenarios de
 """
 
 # Contenido del archivo main.py
-main_content = """
-class Estacion:
-    def __init__(self, nombre, posicion, rango):
-        self.nombre = nombre
-        self.posicion = posicion  # Coordenadas (x, y)
-        self.rango = rango
+main.py contiene las implementaciones de las clases básicas y estructuras que modelan las estaciones de defensa y las naves, además de un árbol binario de búsqueda utilizado para organizar las estaciones. Aquí te detallo su contenido:
 
-class Nave:
-    def __init__(self, id_nave, velocidad, potencia):
-        self.id_nave = id_nave
-        self.velocidad = velocidad
-        self.potencia = potencia
+1. Clases principales
+Estacion
+Representa una estación de defensa:
 
-class NodoEstacion:
-    def __init__(self, estacion):
-        self.estacion = estacion
-        self.izquierda = None
-        self.derecha = None
+nombre: el nombre de la estación.
+posicion: sus coordenadas (x, y) en el espacio.
+rango: el rango de alcance de la estación.
+Nave
+Representa una nave espacial:
 
-class ArbolDefensa:
-    def __init__(self):
-        self.raiz = None
+id_nave: el identificador único de la nave.
+velocidad: la velocidad a la que puede desplazarse.
+potencia: la potencia que puede generar o utilizar.
+2. Árbol Binario de Defensa
+NodoEstacion
+Cada nodo del árbol contiene:
 
-    def insertar(self, estacion):
-        def _insertar(nodo, estacion):
-            if not nodo:
-                return NodoEstacion(estacion)
-            if estacion.rango < nodo.estacion.rango:
-                nodo.izquierda = _insertar(nodo.izquierda, estacion)
-            else:
-                nodo.derecha = _insertar(nodo.derecha, estacion)
-            return nodo
+Una referencia a una estación (estacion).
+Dos referencias a nodos hijos (izquierda y derecha).
+ArbolDefensa
+Un árbol binario que organiza las estaciones según su rango:
 
-        self.raiz = _insertar(self.raiz, estacion)
+Método insertar: Permite agregar estaciones al árbol, ordenándolas por rango.
+Método buscar_mayor_rango: Busca la estación con el mayor rango en el árbol (se encuentra en el extremo derecho).
+3. Árbol General para Naves
+NodoNave
+Representa un nodo de un árbol general:
 
-    def buscar_mayor_rango(self):
-        nodo = self.raiz
-        while nodo and nodo.derecha:
-            nodo = nodo.derecha
-        return nodo.estacion if nodo else None
-
-class NodoNave:
-    def __init__(self, nave):
-        self.nave = nave
-        self.hijos = []
-
-    def agregar_hijo(self, nodo):
-        self.hijos.append(nodo)
-"""
+Contiene una nave (nave) y una lista de hijos (hijos).
+Método agregar_hijo: Permite añadir otros nodos como hijos.
+Este archivo define las bases para organizar y administrar las estaciones y naves. Las estaciones están estructuradas en un árbol binario para facilitar la búsqueda por rango, mientras que las naves están organizadas como nodos en un árbol general, que permite más flexibilidad para representar jerarquías o relaciones complejas.
 
 # Contenido del archivo advanced_features.py
-advanced_features_content = """
-import heapq
-
-class ColaEmergencias:
-    def __init__(self):
-        self.cola = []
-
-    def agregar(self, amenaza, peligro):
-        heapq.heappush(self.cola, (-peligro, amenaza))
-
-    def atender(self):
-        return heapq.heappop(self.cola)[1]
-
-class GrafoRutas:
-    def __init__(self):
-        self.nodos = {}
-
-    def agregar_nodo(self, nodo):
-        if nodo not in self.nodos:
-            self.nodos[nodo] = []
-
-    def conectar_nodos(self, nodo1, nodo2, distancia):
-        self.nodos[nodo1].append((nodo2, distancia))
-        self.nodos[nodo2].append((nodo1, distancia))
-
-def dfs(grafo, nodo_inicial, nodo_objetivo, visitados=None):
-    if visitados is None:
-        visitados = set()
-    if nodo_inicial == nodo_objetivo:
-        return [nodo_inicial]
-    visitados.add(nodo_inicial)
-    for vecino, _ in grafo.nodos[nodo_inicial]:
-        if vecino not in visitados:
-            ruta = dfs(grafo, vecino, nodo_objetivo, visitados)
-            if ruta:
-                return [nodo_inicial] + ruta
-    return None
-
-from collections import deque
-
-def bfs(grafo, nodo_inicial, nodo_objetivo):
-    visitados = set()
-    cola = deque([nodo_inicial])
-    padre = {nodo_inicial: None}
-
-    while cola:
-        nodo = cola.popleft()
-        if nodo == nodo_objetivo:
-            ruta = []
-            while nodo is not None:
-                ruta.insert(0, nodo)
-                nodo = padre[nodo]
-            return ruta
-        for vecino, _ in grafo.nodos[nodo]:
-            if vecino not in visitados:
-                visitados.add(vecino)
-                padre[vecino] = nodo
-                cola.append(vecino)
-    return None
-"""
-
-
+El archivo advanced_features.py incluye estructuras de datos y algoritmos más avanzados utilizados en el proyecto, como colas de prioridad, grafos y búsquedas (DFS y BFS)
+1. Cola de Emergencias (Cola de Prioridad)
+Clase ColaEmergencias
+Implementa una cola de prioridad usando el módulo estándar heapq de Python.
+Métodos:
+agregar(amenaza, peligro): Agrega una amenaza a la cola con su nivel de peligro. El nivel de peligro tiene prioridad alta cuando su valor es mayor (se almacena como negativo para usar el comportamiento de min-heap).
+atender(): Elimina y devuelve la amenaza con el nivel de peligro más alto.
+2. Grafo de Rutas
+Clase GrafoRutas
+Representa un grafo no dirigido donde los nodos son estaciones o puntos clave y las aristas tienen una distancia asociada.
+Métodos:
+agregar_nodo(nodo): Añade un nodo al grafo si no existe.
+conectar_nodos(nodo1, nodo2, distancia): Conecta dos nodos con una distancia específica.
+3. Algoritmos de Búsqueda
+DFS (Depth-First Search)
+Función dfs(grafo, nodo_inicial, nodo_objetivo, visitados=None):
+Realiza una búsqueda en profundidad para encontrar una ruta entre dos nodos.
+Usa un conjunto visitados para evitar ciclos.
+Devuelve una lista con la ruta encontrada o None si no hay conexión.
+BFS (Breadth-First Search)
+Función bfs(grafo, nodo_inicial, nodo_objetivo):
+Realiza una búsqueda en anchura para encontrar la ruta más corta (en términos de número de nodos) entre dos nodos.
+Utiliza:
+Una cola (deque) para gestionar los nodos por explorar.
+Un diccionario padre para reconstruir la ruta una vez encontrado el nodo objetivo.
+Devuelve una lista con la ruta o None si no hay conexión.
+Propósito del archivo
+Cola de Emergencias: Gestionar amenazas espaciales priorizando aquellas más peligrosas.
+Grafo de Rutas: Modelar las conexiones entre estaciones o naves, permitiendo encontrar caminos eficientemente.
+DFS y BFS: Facilitar la navegación en el grafo, ya sea para explorar todas las rutas (DFS) o para encontrar la ruta más corta (BFS).
