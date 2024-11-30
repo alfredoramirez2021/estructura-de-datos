@@ -44,6 +44,7 @@ Representa una nave espacial:
 id_nave: el identificador único de la nave.
 velocidad: la velocidad a la que puede desplazarse.
 potencia: la potencia que puede generar o utilizar.
+
 2. Árbol Binario de Defensa
 NodoEstacion
 Cada nodo del árbol contiene:
@@ -65,19 +66,23 @@ Este archivo define las bases para organizar y administrar las estaciones y nave
 
 # Contenido del archivo advanced_features.py
 El archivo advanced_features.py incluye estructuras de datos y algoritmos más avanzados utilizados en el proyecto, como colas de prioridad, grafos y búsquedas (DFS y BFS)
+
 1. Cola de Emergencias (Cola de Prioridad)
 Clase ColaEmergencias
 Implementa una cola de prioridad usando el módulo estándar heapq de Python.
+
 Métodos:
 agregar(amenaza, peligro): Agrega una amenaza a la cola con su nivel de peligro. El nivel de peligro tiene prioridad alta cuando su valor es mayor (se almacena como negativo para usar el comportamiento de min-heap).
 atender(): Elimina y devuelve la amenaza con el nivel de peligro más alto.
-2. Grafo de Rutas
+3. Grafo de Rutas
 Clase GrafoRutas
 Representa un grafo no dirigido donde los nodos son estaciones o puntos clave y las aristas tienen una distancia asociada.
+
 Métodos:
 agregar_nodo(nodo): Añade un nodo al grafo si no existe.
 conectar_nodos(nodo1, nodo2, distancia): Conecta dos nodos con una distancia específica.
-3. Algoritmos de Búsqueda
+
+4. Algoritmos de Búsqueda
 DFS (Depth-First Search)
 Función dfs(grafo, nodo_inicial, nodo_objetivo, visitados=None):
 Realiza una búsqueda en profundidad para encontrar una ruta entre dos nodos.
@@ -94,3 +99,30 @@ Propósito del archivo
 Cola de Emergencias: Gestionar amenazas espaciales priorizando aquellas más peligrosas.
 Grafo de Rutas: Modelar las conexiones entre estaciones o naves, permitiendo encontrar caminos eficientemente.
 DFS y BFS: Facilitar la navegación en el grafo, ya sea para explorar todas las rutas (DFS) o para encontrar la ruta más corta (BFS).
+
+Conclusión Final
+Síntesis del proyecto:
+"El trabajo práctico Sistema de Defensa Planetaria logró integrar múltiples conceptos avanzados de programación para abordar un problema que simula escenarios reales de gestión y protección. A través de estructuras como árboles, colas de prioridad y grafos, se diseñó un sistema eficiente y escalable capaz de coordinar recursos de defensa de manera óptima."
+
+Impacto de las estructuras de datos y algoritmos:
+"Este proyecto destaca la importancia de elegir las estructuras de datos adecuadas para resolver problemas específicos. Por ejemplo, el árbol binario permitió organizar y buscar estaciones de defensa por rango de forma eficiente, mientras que el grafo fue esencial para modelar y explorar rutas espaciales."
+
+Aprendizajes clave:
+
+Optimización y eficiencia:
+"Comprendimos cómo estructuras bien diseñadas pueden reducir significativamente la complejidad de búsqueda y gestión."
+Resolución de problemas complejos:
+"Aplicar algoritmos como BFS y DFS nos ayudó a resolver desafíos de navegación y priorización en contextos dinámicos."
+Simulación práctica:
+"Este tipo de proyecto refuerza cómo la teoría se traduce en soluciones reales aplicables a diversos campos, desde la defensa hasta la logística."
+Relevancia en el mundo real:
+"Aunque se trata de un trabajo practico, los conceptos empleados tienen aplicaciones prácticas en áreas como la planificación de rutas, la gestión de emergencias y la asignación de recursos en sistemas complejos."
+
+Cierre:
+"Finalmente, este trabajo no solo consolidó conocimientos técnicos, sino que también planteó nuevos desafíos que podrían explorarse en futuros proyectos, como la integración de inteligencia artificial para mejorar la toma de decisiones. Muchas gracias por su atención, y quedo atento a sus preguntas o comentarios."
+
+
+
+
+
+
